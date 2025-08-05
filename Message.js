@@ -4,13 +4,14 @@
   };
   
   // Efek ketik per kata
-  const message = `heyy cessaa!!!,
-<br> <br>
-I just wanna say, kamu itu cantik banget not only dari foto atau IG, tapi juga dari cara kamu ngobrol dan bikin aku pengen kenal lebih jauh wkkw. even kita belum pernah ketemu langsung, aku bisa feel vibe kamu yang beda, yang bikin aku curious banget.
-<br> <br>
-I believe someday kita bakal ketemu, dan kamu pasti jauh lebih cantikk n kerenn daripada yang aku bayangin sekarang. for now, aku cuma pengen kamu tau kalo aku really like the way kamu jadi diri sendiri, and I’m happy bisa kenal kamu walau cuma lewat chat.
-<br> <br>
-stay awesome, ya. aku bakal terus nunggu waktu kita bisa ngobrol face to face <3 `;
+  const message = `Hi Reniza Zulkarnaen! Congrats on becomin’ a year older! <br> <br>
+06 august’s not just your birthday it’s a reminder of how lucky the world is to have you, and how lucky I am to have met you.
+Terima kasih sudah hadir di hidupku dengan semua versi diri Ica yang hangat, yang gemas, bahkan yang ngambek pun tetap aku suka. Setiap detik bersamamu terasa lebih hidup, dan setiap senyummu adalah hadiah paling tenang buat pikiranku. May your days be as soft as your laugh, as warm as your hug, and as beautiful as your soul.
+And may I get to be a part of those days for as long as I’m allowed to. <br> <br>
+Selamat ulang tahun, perempuan yang selalu bisa buat hatiku tenang cuma dengan bilang “iya, aku ngerti.”
+You deserve the kind of love that feels like coming home and I hope I can be that home.
+
+Love you more, always in all ways.🤍 `;
   
   const messageContent = document.getElementById("message-content");
   const words = message.split(" ");
