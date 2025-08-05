@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Gameboy Birthday</title>
+    <link rel="stylesheet" href="utama.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <audio id="bg-music" src="lagu-2.mp3"></audio>
+    <div class="gameboy">
+      <!-- Tambahkan ini untuk power -->
+      <div class="power-indicator">
+        <div class="power-light"></div>
+        <span>Power</span>
+      </div>
+      <!-- END power -->
+
+      <div class="screen">
+        <h2>FOR YOU!</h2>
+        <p>Press Start Button</p>
+        <div class="screen-bottom-border">
+          <div class="battery-indicator">
+            <div class="battery-dot"></div>
+            <span>Battery</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="buttons">
+        <button class="message" onclick="window.location.href='Message.html'">Message</button>
+        <button class="gallery" onclick="window.location.href='gallery.html'">Gallery</button>
+        <button class="music" onclick="window.location.href='Music.html'">Music</button>
+        <button class="tetris" onclick="window.location.href='apaajaa/index.html'">Flower</button>
+      </div>
+
+      <div class="controls">
+        <div class="dpad">
+          <div class="up"></div>
+          <div class="left"></div>
+          <div class="center"></div>
+          <div class="right"></div>
+          <div class="down"></div>
+        </div>
+        <div class="ab-buttons">
+          <div class="btn-a">A</div>
+          <div class="btn-b">B</div>
+        </div>
+      </div>
+
+      <div class="start-select">
+        <div class="select">Select</div>
+        <div class="start" onclick="window.location.href='Message.html'">Start</div>
+      </div>
+    </div>
+
+    <script src="utama.js"></script>
+  </body>
+</html>

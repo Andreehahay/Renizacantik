@@ -1,0 +1,235 @@
+body {
+    margin: 0;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: "Courier New", monospace;
+  }
+  
+  .gameboy {
+    position: relative;
+    background: #ccc;
+    padding: 20px;
+    border: 10px solid #888;
+    border-radius: 30px;
+    width: 360px;
+    box-shadow: 0 0 30px hotpink;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .screen {
+    background: repeating-linear-gradient(
+        to right,
+        #001100,
+        #001100 2px,
+        #003300 2px,
+        #003300 20px
+      ),
+      repeating-linear-gradient(
+        to bottom,
+        #001100,
+        #001100 2px,
+        #003300 2px,
+        #003300 20px
+      );
+    color: #33ff33; /* Mengubah warna teks "Happy Birthday!" */
+    width: 90%;
+    padding: 20px 20px 60px; /* padding bawah lebih besar */
+    border: 3px inset #444;
+    border-radius: 10px;
+    text-align: center;
+    font-family: "Press Start 2P", monospace;
+    position: relative;
+    box-sizing: border-box;
+  }
+  
+  .screen p {
+    color: yellow; /* Mengubah warna teks "Press Start Button" menjadi kuning */
+  }
+  
+  .screen-bottom-border {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    background: #111;
+    border-top: 2px solid #444;
+    border-radius: 0 0 10px 10px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 10px;
+    box-sizing: border-box;
+  }
+  
+  .battery-indicator {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: red;
+    font-size: 10px;
+    font-family: "Press Start 2P", monospace;
+  }
+  
+  .battery-dot {
+    width: 8px;
+    height: 8px;
+    background-color: red;
+    border-radius: 50%;
+    box-shadow: 0 0 4px red;
+  }
+  
+  .buttons {
+    font-family: "Press Start 2P", monospace;
+    font-size: 10px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .buttons button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s;
+  }
+  
+  .buttons .message {
+    background-color: #ff6f61;
+  }
+  
+  .buttons .gallery {
+    background-color: #5f9ea0;
+  }
+  
+  .buttons .music {
+    background-color: #8a2be2;
+  }
+  
+  .buttons .tetris {
+    background-color: #ff00a2;
+  }
+  
+  .buttons button:hover {
+    transform: scale(1.05);
+  }
+  
+  .controls {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 10px;
+  }
+  
+  .dpad {
+    position: relative;
+    width: 80px;
+    height: 80px;
+  }
+  
+  .dpad div {
+    position: absolute;
+    background: #555;
+    width: 24px;
+    height: 24px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+  }
+  
+  .up {
+    top: 0;
+    left: 28px;
+  }
+  .down {
+    bottom: 0;
+    left: 28px;
+  }
+  .left {
+    left: 0;
+    top: 28px;
+  }
+  .right {
+    right: 0;
+    top: 28px;
+  }
+  .center {
+    top: 28px;
+    left: 28px;
+    background: #777;
+  }
+  
+  .ab-buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+  }
+  
+  .btn-a,
+  .btn-b {
+    width: 40px;
+    height: 40px;
+    background: red; /* Warna merah untuk tombol A dan B */
+    border-radius: 50%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 16px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+  }
+  
+  .power-indicator {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: red;
+    font-weight: bold;
+    font-size: 12px;
+    position: absolute;
+    top: 5px;
+    left: 20px;
+  }
+  
+  .power-light {
+    width: 10px;
+    height: 10px;
+    background: red;
+    border-radius: 50%;
+    box-shadow: 0 0 5px red;
+  }
+  
+  .start-select {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 15px;
+  }
+  
+  .select,
+  .start {
+    background: #444;
+    color: white;
+    padding: 6px 16px;
+    border-radius: 8px;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: bold;
+    box-shadow: inset 0 0 3px #000;
+    cursor: pointer;
+  }
+  

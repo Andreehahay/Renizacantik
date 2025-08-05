@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Loading Page</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #000; /* hitam legam */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      font-family: 'Courier New', Courier, monospace;
+    }
+
+    .loading-box {
+      border: 2px solid pink;
+      padding: 30px 40px;
+      text-align: center;
+      border-radius: 10px;
+      background-color: #111; /* gelap dalam kotaknya */
+      box-shadow: 0 0 15px rgba(255, 105, 180, 0.5);
+      width: 320px;
+    }
+
+    .title {
+      font-size: 24px;
+      font-weight: bold;
+      color: hotpink;
+      margin-bottom: 20px;
+    }
+
+    .description {
+      font-size: 16px;
+      color: #ddd;
+      margin-bottom: 10px;
+      min-height: 24px;
+    }
+
+    .cursor {
+      display: inline-block;
+      width: 8px;
+      animation: blink 1s step-start infinite;
+      color: #ddd;
+    }
+
+    @keyframes blink {
+      50% {
+        opacity: 0;
+      }
+    }
+
+    .progress-bar {
+      width: 100%;
+      height: 10px;
+      background-color: #333;
+      border-radius: 5px;
+      overflow: hidden;
+    }
+
+    .progress-fill {
+      height: 100%;
+      width: 0%;
+      background-color: hotpink;
+      transition: width 0.2s ease;
+    }
+
+    .progress-text {
+      font-size: 18px;
+      margin-top: 10px;
+      color: #eee;
+    }
+  </style>
+</head>
+<body>
+  <div class="loading-box">
+    <div class="title">For You</div>
+    <div class="description" id="descriptionText">booting system<span class="cursor">_</span></div>
+    <div class="progress-bar">
+      <div class="progress-fill" id="progressFill"></div>
+    </div>
+    <div class="progress-text" id="progressText">Loading... 0%</div>
+  </div>
+
+  <script>
+    let progress = 0;
+    const progressText = document.getElementById("progressText");
+    const progressFill = document.getElementById("progressFill");
+    const descriptionText = document.getElementById("descriptionText");
+
+    const updateDescription = (p) => {
+      if (p < 20) return "booting system";
+      if (p < 40) return "initializing";
+      if (p < 60) return "loading game data";
+      if (p < 90) return "preparing birthday surprise";
+      return "ready!";
+    };
+
+    const interval = setInterval(() => {
+      if (progress >= 100) {
+        clearInterval(interval);
+        window.location.href = "utama.html"; // ganti ke halaman tujuan
+      } else {
+        progress++;
+        progressText.textContent = `Loading... ${progress}%`;
+        progressFill.style.width = `${progress}%`;
+
+        const desc = updateDescription(progress);
+        descriptionText.innerHTML = `${desc}<span class="cursor">_</span>`;
+      }
+    }, 50);
+  </script>
+</body>
+</html>

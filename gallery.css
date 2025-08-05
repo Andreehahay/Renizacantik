@@ -1,0 +1,297 @@
+body {
+  margin: 0;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: "Courier New", monospace;
+}
+
+.gallery-container {
+  width: 90%;
+  max-width: 960px;
+  height: auto;
+  background-color: black;
+  border: 2px solid hotpink;
+  box-shadow: 0 0 15px pink;
+  border-radius: 15px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.gallery-inner {
+  width: 100%;
+  background-color: black;
+  background-image: radial-gradient(circle, rgba(0, 255, 0, 0.4) 0%, rgba(0, 255, 0, 0) 60%),
+    linear-gradient(to right, #006900 1px, transparent 1px),
+    linear-gradient(to bottom, #006900 1px, transparent 1px);
+  background-size: 5px 5px;
+  border-radius: 10px;
+  padding: 20px;
+  overflow: auto;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.gallery-title {
+  text-align: center;
+  font-family: "Press Start 2P", "Courier New", monospace;
+  font-weight: bold;
+  font-size: 3vw;
+  color: white;
+  margin-bottom: 30px;
+}
+
+.horizontal-box {
+  width: 100%;
+  height: 80px;
+  background-color: #333;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  border-top: 3px solid hotpink;
+  border-left: 3px solid hotpink;
+  border-right: 3px solid hotpink;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  box-sizing: border-box;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.red {
+  background-color: red;
+}
+
+.green {
+  background-color: limegreen;
+}
+
+.photobox-title {
+  color: yellow;
+  font-family: "Press Start 2P", "Courier New", monospace;
+  font-size: 2.5vw;
+  text-align: center;
+  flex: 1;
+}
+
+.horizontal-box-second {
+  width: 100%;
+  height: 80px;
+  background-color: #3c3c3c;
+  border: 3px solid hotpink;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px;
+  margin-bottom: 30px;
+  box-sizing: border-box;
+}
+
+.small-black-rectangle {
+  width: 80%;
+  max-width: 600px;
+  height: 25px;
+  background-color: black;
+  border-radius: 5px;
+}
+
+.start-section {
+  width: 100%;
+  min-height: 500px;
+  max-width: 900px;
+  background-color: #000013;
+  border: 3px solid hotpink;
+  border-radius: 20px;
+  padding: 40px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-sizing: border-box;
+  margin-top: 30px;
+}
+
+.start-content {
+  text-align: center;
+}
+
+.start-text {
+  font-family: "Press Start 2P", "Courier New", monospace;
+  font-size: 18px;
+  color: white;
+  margin-bottom: 30px;
+}
+
+.start-button {
+  background-color: rgb(210, 1, 1);
+  color: white;
+  font-family: "Press Start 2P", "Courier New", monospace;
+  font-size: 16px;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  animation: glow 2s infinite alternate;
+}
+
+/* Animasi kelap kelip */
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 5px rgb(126, 3, 3), 0 0 10px rgb(128, 7, 7), 0 0 20px rgb(141, 4, 4);
+  }
+  100% {
+    box-shadow: 0 0 15px rgb(159, 2, 2), 0 0 30px rgb(139, 2, 2), 0 0 45px rgb(137, 1, 1);
+  }
+}
+
+.horizontal-box-third {
+  width: 100%;
+  height: 80px;
+  background-color: #333;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  border-bottom: 3px solid hotpink;
+  border-left: 3px solid hotpink;
+  border-right: 3px solid hotpink;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 0 20px;
+  box-sizing: border-box;
+  margin-top: 30px;
+}
+
+.black-rectangle {
+  width: 100px;
+  height: 40px;
+  background-color: black;
+  border-radius: 30px;
+}
+
+.photo-frame {
+  width: 90%;
+  max-width: 350px;
+  height: auto;
+  background-color: white;
+  border: 5px solid hotpink;
+  border-radius: 15px;
+  margin: 20px 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transform: translateY(-100px);
+  animation: slideDown 1s forwards;
+}
+
+.photo-frame img {
+  width: 90%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+.photo-date {
+  margin-top: 10px;
+  font-family: "Courier New", monospace;
+  font-size: 16px;
+  color: black;
+}
+
+@keyframes slideDown {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.navigation-buttons {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+  position: relative;
+  bottom: auto;
+  flex-wrap: wrap;
+}
+
+.back-button, .next-button {
+  font-family: "Press Start 2P", "Courier New", monospace;
+  font-size: 14px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  color: white;
+  animation: glow-buttons 2s infinite alternate;
+}
+
+.back-button {
+  background-color: red;
+}
+
+.next-button {
+  background-color: green;
+}
+
+@keyframes glow-buttons {
+  0% {
+    box-shadow: 0 0 5px white, 0 0 10px white;
+  }
+  100% {
+    box-shadow: 0 0 15px white, 0 0 30px white;
+  }
+}
+
+@media (min-width: 1025px) {
+  .gallery-container {
+    max-width: 960px;
+  }
+
+  .start-section {
+    max-width: 900px;
+  }
+}
+
+
+/* === Responsive === */
+@media (max-width: 768px) {
+  .gallery-title {
+    font-size: 6vw;
+  }
+
+  .photobox-title {
+    font-size: 4vw;
+  }
+
+  .start-text {
+    font-size: 16px;
+  }
+
+  .start-button {
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+
+  .back-button, .next-button {
+    font-size: 12px;
+    padding: 8px 16px;
+  }
+}

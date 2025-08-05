@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Music</title>
+    <link rel="stylesheet" href="music.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="music-rectangle">
+      <h1 class="music-title">Music Player</h1>
+
+      <div class="song-info">
+        <div class="song-box">
+          <img id="song-image" src="foto1.png" alt="Song Image" />
+          <h2 id="song-title">Anything</h2>
+          <input type="range" id="progress-bar" value="0" />
+          <div class="time-info">
+            <span id="current-time">0:00</span>
+            <span id="total-duration">3:35</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="controls">
+        <button id="prev">⏮️</button>
+        <button id="play-pause">▶️</button>
+        <button id="next">⏭️</button>
+      </div>
+
+      <div class="volume-control">
+        <button id="volume-btn">🔊</button>
+        <input
+          type="range"
+          id="volume-slider"
+          min="0"
+          max="1"
+          step="0.01"
+          style="display: none"
+        />
+      </div>
+
+      <div class="playlist">
+        <p>PLAYLIST:</p>
+        <div
+          class="playlist-item"
+          data-title="Anything"
+          data-image="foto1.png"
+          data-duration="3:35"
+          data-song="lagu-1.mp3"
+        >
+          Anything - 3:35
+        </div>
+        <div
+          class="playlist-item"
+          data-title="Apocalypse"
+          data-image="foto-2.png"
+          data-duration="4:50"
+          data-song="lagu-2.mp3"
+        >
+        Apocalypse - 4:50
+        </div>
+        <div
+          class="playlist-item"
+          data-title="Wildflower"
+          data-image="foto-3.png"
+          data-duration="4:21"
+          data-song="lagu-3.mp3"
+        >
+          Wildflower - 4:21
+        </div>
+      </div>
+      <div class="navigation-buttons">
+        <button class="next-button" onclick="location.href='apaajaa/index.html'">SELANJUTNYA</button>
+        <button class="back-button" onclick="location.href='index.html'">KEMBALI</button>
+
+      </div>
+    </div>
+
+    <audio id="audio" src="lagu-1.mp3"></audio>
+
+    <script src="music.js"></script>
+  </body>
+</html>
