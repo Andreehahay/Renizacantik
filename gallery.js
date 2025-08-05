@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const startButton = document.querySelector('.start-button');
   const startSection = document.querySelector('.start-section');
 
-  const photoSources = ['1.jpeg', '2.jpeg', '5.jpeg', '4.jpeg'];
+  const photoSources = ['1.jpg', '2.jpg', '5.png', '4.jpg'];
   const randomDates = [
     'MY LOVE',
     'MY LOVE',
